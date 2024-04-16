@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.w3slides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+
+<body>
+<!--
+<div class="w3-container">
+  <h2>Slideshow Indicators</h2>
+  <p>An example of using buttons to indicate how many slides there are in the slideshow, and which slide the user is currently viewing.</p>
+</div>
+
+<div class="w3-content w3-display-container" style="max-width:800px">
+  <img class="w3slides" src="images/PAAS.jpeg" style="width:100%">
+  <img class="w3slides" src="images/PAAS.jpeg" style="width:100%">
+  <img class="w3slides" src="images/PAAS.jpeg" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("w3slides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</body>
+</html> 
+
+
+
+
+<div class="slider">
+    <div class="slider-item">
+      <div class="test-img"><img src="images/kiki.jpg" alt="Placeholder" width="157" height="157"></div>
+      <div class="test-text"><span class="title"><span>Kiki Ahmad Fauzi</span>Maker Desicion II & Web Developer</span>Produk STS ini dirancang oleh karya anak bangsa agar dapat membawa perubahan terhadap proses manajemen sampah di Indonesia</div>
+    </div>
+    <div class="slider-item">
+      <div class="test-img"><img src="images/ilham.JPG" alt="Placeholder" width="157" height="157"></div>
+      <div class="test-text"><span class="title"><span>llham Bintang Ramadhan</span>CSS Developer</span>Sangat penting bagi saya untuk mendukung penuh project ini, diharapkan dapat menjadi inovasi baru bagi lingkungan sekitar</div>
+    </div>
+    <div class="slider-item">
+      <div class="test-img"><img src="images/rafi.JPG" alt="Placeholder" width="157" height="157"></div>
+      <div class="test-text"><span class="title"><span>Rafi Agustiar Dermawan</span>Designer</span>Desain yang menarik bukan hanya untuk memancing konsumen, namun juga bagaimana hal ini dapat berpengaruh dan memberikan dampak positif bagi lingkungan</div>
+    </div>
+    <div class="slider-item">
+      <div class="test-img"><img src="images/deo.jpeg" alt="Placeholder" width="157" height="157"></div>
+      <div class="test-text"><span class="title"><span>Solideo M. Hasugian</span>Maker Desicion I & Web Auditor </span>Kerjasama Tim bukan hanya tentang bagaimana Project ini rampung, namun juga bagaimana project ini bisa bermanfaat bagi masyarakat dan lingkungan</div>
+    </div>
+  </div> -->
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
+  /* demo setup */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box }
+  body { height: 1000px; padding: 2rem; background-color: #535252; font-family: 'Open Sans', sans-serif; }
+  body > * + *  { margin-top: 1.5em }
+  h1{ text-align: center; font-weight: 800; color: rgb(6 6 6); text-transform: uppercase }
+  blockquote { max-width: 600px; margin-inline: auto }
+  
+  /* blockquote card colors */
+  blockquote.q-card-color-1{
+    --accent-color: rgb(255, 255, 255);
+    --bg-color: rgb(43, 45, 176);
+    --dot-color: rgb(255 255 255 / .35);
+    --text-color: rgb(243 243 243);
+    --text-color-author: rgb(53, 52, 52);
+  }
+  
+  /* blockquote card setup*/
+  blockquote.q-card{
+    --padding: 1rem;
+    padding: var(--padding);
+    color: var(--text-color, black);
+    font-weight: 600;
+    background-color: var(--bg-color, white);
+    display: grid;
+    gap: 1rem;
+    background-image: radial-gradient( circle, var(--dot-color, rgb(0 0 0 / .125)) calc(25% - 1px), transparent 25% );
+    background-size: 0.5rem 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0.5rem 0.5rem 2rem rgb(0 0 0 / .5)
+    
+  }
+  blockquote.q-card::before{
+    --qHeight: 4rem;
+    content: "";
+    margin-left: calc(var(--padding) * -1);
+    margin-top: calc(var(--padding) * -1);
+    height: var(--qHeight);
+    width: calc(var(--qHeight) * 1.1);
+    background-image:
+      radial-gradient(
+        circle at bottom right,
+        transparent calc(var(--qHeight) / 4 - 1px),
+        var(--accent-color, black) calc(var(--qHeight) / 4) calc(var(--qHeight) / 2), 
+        transparent calc(var(--qHeight) / 2 + 1px)
+      ),
+      linear-gradient(var(--accent-color, black), var(--accent-color, black));
+    background-size: calc(var(--qHeight) / 2) calc(var(--qHeight) / 2);
+    background-position: top left, bottom left;
+    background-repeat: space no-repeat
+  }
+  
+  blockquote.q-card > .author{
+    color: var(--text-color-author, white);
+    background-color: var(--accent-color, black);
+    justify-self: end;
+    font-size: 0.75em;  
+    padding: 0.5em 1em;
+    border-radius: 0.25rem;
+  }
+  blockquote.q-card > .author::before{
+    content: "- "
+  }
+</style>
+
+<h1>Quote Cards</h1>
+
+<blockquote class="q-card q-card-color-1">
+  <div class="content">
+    <h3 style="font-size: 18px; font-weight: 600; margin-left: 48px;"> Tetaplah Untuk Selalu Peduli, Bertawakhal, dan Berikhtiar. </h3>  
+  </div>
+  <div class='author'> TKJ SIJA SMKN 1 CIMAHI </div>
+</blockquote>
